@@ -6,23 +6,24 @@ import java.util.Scanner;
 
 public class task1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите число: ");
-        int n = scanner.nextInt();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Введите число: ");
+            int n = scanner.nextInt();
 
-        // Вычисление n-го треугольного числа
-        int triangleNumber = 0;
-        for (int i = 1; i <= n; i++) {
-            triangleNumber += i;
-        }
-        System.out.printf("%d-ое треугольное число: %d%n", n, triangleNumber);
+            // Вычисление n-го треугольного числа
+            int triangleNumber = 0;
+            for (int i = 1; i <= n; i++) {
+                triangleNumber += i;
+            }
+            System.out.printf("%d-ое треугольное число: %d%n", n, triangleNumber);
 
-        // Вычисление факториала числа n
-        int factorial = 1;
-        for (int i = 1; i <= n; i++) {
-            factorial *= i;
+            // Вычисление факториала числа n
+            int factorial = 1;
+            for (int i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            System.out.printf("%d! = %d%n", n, factorial);
         }
-        System.out.printf("%d! = %d%n", n, factorial);
     }
 }
 
