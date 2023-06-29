@@ -24,7 +24,8 @@ public class task {
 
         // Поиск минимального значения
         int min = Integer.MAX_VALUE;
-        for (int number : oddNumbers) {
+        for (int number : numbers) {
+        //for (int number : oddNumbers) { - для поиска минимального значения из полученного списка
             if (number < min) {
                 min = number;
             }
@@ -32,7 +33,8 @@ public class task {
 
         // Поиск максимального значения
         int max = Integer.MIN_VALUE;
-        for (int number : oddNumbers) {
+        for (int number : numbers) {
+        //for (int number : oddNumbers) { - для поиска максимального значения из полученного списка
             if (number > max) {
                 max = number;
             }
@@ -40,10 +42,12 @@ public class task {
 
         // Вычисление среднего значения
         double sum = 0;
-        for (int number : oddNumbers) {
+        for (int number : numbers) {
+        //for (int number : oddNumbers) { - для вычисления среднего значения из полученного списка
             sum += number;
         }
-        double average = sum / oddNumbers.size();
+        double average = sum / numbers.size();
+        //double average = sum / oddNumbers.size();
 
         // Вывод результатов
         System.out.println("Исходный список: " + numbers);
